@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Practice</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Fundamentals</h1>
+
+    <h2 id="heading">Welcome Aaditya</h2>
+
+    <button onclick="changeText()">
+        Change Text
+    </button>
+
+    <br><br>
+
+    <button onclick="showMessage()">
+        Click Me
+    </button>
+
+    <br><br>
+
+    <input type="number" id="num1" placeholder="First Number">
+
+    <input type="number" id="num2" placeholder="Second Number">
+
+    <button onclick="addNumbers()">Add</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+        // Variables
+
+        let name = "Aaditya";
+
+        let age = 22;
+
+        console.log(name);
+        console.log(age);
+
+
+        // Function
+
+        function showMessage() {
+
+            alert("Welcome to JavaScript!");
+
+        }
+
+
+        // DOM Manipulation
+
+        function changeText() {
+
+            document.getElementById("heading").innerHTML =
+                "JavaScript is Working!";
+
+        }
+
+
+        // Addition Function
+
+        function addNumbers() {
+
+            let a = Number(document.getElementById("num1").value);
+
+            let b = Number(document.getElementById("num2").value);
+
+            let sum = a + b;
+
+            document.getElementById("result").innerHTML =
+                "Answer: " + sum;
+
+        }
+
+
+        // If Else
+
+        let marks = 75;
+
+        if (marks >= 40) {
+
+            console.log("Pass");
+
+        } else {
+
+            console.log("Fail");
+
+        }
+
+
+        // For Loop
+
+        for (let i = 1; i <= 5; i++) {
+
+            console.log(i);
+
+        }
+
+
+        // Array
+
+        let skills = ["HTML", "CSS", "JavaScript", "PHP"];
+
+        console.log(skills);
+
+        skills.forEach(function(skill) {
+
+            console.log(skill);
+
+        });
+
+
+        // Event Handling
+
+        document.addEventListener("keydown", function(event) {
+
+            console.log("Key pressed:", event.key);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+// Contact Form Functionality
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    // Prevent page refresh
+    event.preventDefault();
+
+    // Get user information
+    let name = document.getElementById("name").value;
+
+    let email = document.getElementById("email").value;
+
+    let message = document.getElementById("message").value;
+
+    // Display response
+    document.getElementById("response").innerHTML =
+        "Thank you " + name + "! Your message has been received.";
+
+    // Clear form
+    document.getElementById("contactForm").reset();
+
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+});
+
+
+// Welcome Message
+
+console.log("Welcome to Aaditya's Portfolio Website!");
+
+
+// Button Interaction
+
+let buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(function(button) {
+
+    button.addEventListener("mouseover", function() {
+
+        button.style.transition = "0.3s";
+
+    });
+
+});
